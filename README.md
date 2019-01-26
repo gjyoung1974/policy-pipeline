@@ -14,11 +14,13 @@ via github commit webhook trigger.
 
 To render locally, do something like:    
 
+1. fork the templates repo to your GH Account:
 ```shell
-mkdir ~/soc2-policy-templates
-````
+cd ~
+git clone https://github.com/gjyoung1974/soc2-policy-templates.git
+```
 
-then  
+1. then  
 
 ```shell
 docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} \
