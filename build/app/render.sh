@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Running render actions"
 cd /source/
-git clone https://github.com/gjyoung1974/soc2-policy-templates.git
+git clone https://github.com/${gh_user}/${gh_repo}.git
 cd soc2-policy-templates
 comply build
 cd /source/soc2-policy-templates
