@@ -19,14 +19,14 @@ via github commit webhook trigger.
 A. fork a documents templates repo to your GH Account:    
 [soc2-policy-templates](https://github.com/gjyoung1974/soc2-policy-templates)     
 
-B. make required edits to the Markdown code   
+B. clone it locally  
 
 ```shell
 cd ~
 git clone https://github.com/gjyoung1974/soc2-policy-templates.git
 ```
 
-C. then  run docker     
+C. make required edits to the Markdown code & then run docker     
 
 ```shell
 docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} \
