@@ -14,7 +14,7 @@ via github commit webhook trigger.
 
 To render locally, do something like:    
 
-A. fork the templates repo to your GH Account:
+A. fork a documents templates repo to your GH Account:
 ```shell
 cd ~
 git clone https://github.com/gjyoung1974/soc2-policy-templates.git
