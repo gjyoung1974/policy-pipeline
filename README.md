@@ -4,8 +4,9 @@ Based on [StrongDM Comply](https://github.com/strongdm/comply)
 
 A build pipeline that renders "policy-as-code" to "human friendly" artifacts: word processor docs, web files, EReader, PDF etc.    
 
-1. Enforces change change control via github workflow
-1. Enforce template style
+Value addded:     
+1. Enable enforcement of documentation change control via git/github workflow.
+1. Enforce documentation template style consistency.
 1. Include documentation TDD quality gates.
 1. Automate  branching, tagging, version control, and archiving for policy documents!
 
