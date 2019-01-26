@@ -15,7 +15,7 @@ via github commit webhook trigger.
 To render locally, do something like:    
 
 ```shell
-mkdir soc2-policy-templates
+mkdir ~/soc2-policy-templates
 ````
 
 then  
