@@ -1,5 +1,5 @@
 ## StrongDM Comply application container
-FROM gjyoung1974/complyapp:latest
+FROM gjyoung1974/comply:latest
 LABEL maintainer="Gordon Young <gjyoung1974@gmail.com>"
 LABEL description="Use this container to render docs from markdown/RST to human friendly artifacts"
 
