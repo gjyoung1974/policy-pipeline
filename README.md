@@ -33,7 +33,7 @@ docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_
     --env gh_repo="soc2-policy-templates" -v ~/soc2-policy-templates:/source gyoung/comply:latest
 ```
 
-D. Ultimately use a build system like CircleCI. Include a config.yml similar to the following in your templates repository:
+D. Ultimately use a build system like [CircleCI.](https://circleci.com) Include a config.yml similar to the following in your templates repository:
 
 ```yaml
 version: 2
