@@ -6,10 +6,13 @@ LABEL description="Use this container to render docs from markdown/RST to human 
 ENV LANG C.UTF-8
 ENV PATH /root/.cabal/bin:/root/.local/bin:/opt/cabal/2.4/bin:/opt/ghc/8.6.3/bin:$PATH
 
+ENV gh_user ''
+ENV gh_repo ''
+ENV gh_token ''
+ENV gh_email ''
+
 WORKDIR /source
-ADD render.sh /source/render.sh
-ADD ./template /source/template
+ADD render.sh /usr/local/bin/render.sh
 
 # run a command
-ENTRYPOINT ["/source/render.sh"]
-
+ENTRYPOINT ["/usr/local/bin/render.sh"]
