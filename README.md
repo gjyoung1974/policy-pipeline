@@ -12,9 +12,17 @@ To use this:
 use the Dockerfile in the [build/app](./build/app) directory to automate rendering of final artifacts    
 via github commit webhook trigger.
 
-To render locally:    
-```
-docker run -v ~/${source_directory}:/source/template ${tag_of_container}
+To render locally, do something like:    
+
+```shell
+mkdir soc2-policy-templates
+````
+
+then  
+
+```shell
+docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} \
+    --env gh_repo="soc2-policy-templates" -v ~/soc2-policy-templates:/source gyoung/comply:latest
 ```
 
 ---    
