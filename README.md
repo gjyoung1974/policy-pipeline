@@ -33,7 +33,21 @@ docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_
     --env gh_repo="soc2-policy-templates" -v ~/soc2-policy-templates:/source gyoung/comply:latest
 ```
 
-Ultimately use the Dockerfile in the 'app' directory to build a CICD pipeline build configuration.    
+D. Ultimately use a build system like CircleCI. Include a config.yml similar to the following in your templates repository:
+
+```yaml
+version: 2
+executorType: machine
+jobs:
+  build:
+    working_directory: ~/source
+    docker:
+    machine:
+      image: circleci/classic:edge
+    steps:
+      - checkout
+      - run: docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} --env gh_repo=${GITHUB_REPO} ${COMPLY_APP_IMAGE}
+```   
 
 ---    
 2018 gjyoung1974@gmail.com
