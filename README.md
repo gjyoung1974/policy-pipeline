@@ -12,10 +12,22 @@ To use this:
 use the Dockerfile in the [build/app](./build/app) directory to automate rendering of final artifacts    
 via github commit webhook trigger.
 
-To render locally:    
+To render locally, do something like:    
+
+A. fork a documents templates repo to your GH Account:
+```shell
+cd ~
+git clone https://github.com/gjyoung1974/soc2-policy-templates.git
 ```
-docker run -v ~/${source_directory}:/source/template ${tag_of_container}
+
+B. then  run docker
+
+```shell
+docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} \
+    --env gh_repo="soc2-policy-templates" -v ~/soc2-policy-templates:/source gyoung/comply:latest
 ```
+
+Ultimately use the Dockerfile in the 'app' directory to build a CICD pipeline build configuration.    
 
 ---    
 2018 gjyoung1974@gmail.com
