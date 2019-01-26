@@ -14,18 +14,20 @@ via github commit webhook trigger.
 
 To render locally, do something like:    
 
-1. fork the templates repo to your GH Account:
+A. fork the templates repo to your GH Account:
 ```shell
 cd ~
 git clone https://github.com/gjyoung1974/soc2-policy-templates.git
 ```
 
-1. then  
+B. then  run docker
 
 ```shell
 docker run --env gh_token=${GITHUB_TOKEN} --env gh_user=${GITHUB_USER} --env gh_email=${GITHUB_EMAIL} \
     --env gh_repo="soc2-policy-templates" -v ~/soc2-policy-templates:/source gyoung/comply:latest
 ```
+
+Ultimately use the Dockerfile in the 'app' directory to build a CICD pipeline build configuration.    
 
 ---    
 2018 gjyoung1974@gmail.com
