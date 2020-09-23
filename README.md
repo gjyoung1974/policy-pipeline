@@ -1,5 +1,7 @@
 # Documentation Pipeline    
 
+#### TODO: upgrade to latest Debian
+
 Based on [StrongDM Comply](https://github.com/strongdm/comply)    
 
 A **build pipeline** that renders "policy-as-code" to "human friendly" artifacts: word processor docs, web files, EReader, PDF etc.    
